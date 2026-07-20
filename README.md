@@ -5,7 +5,7 @@ Homebrew formulae for [AKA Security](https://akasecurity.io) tools.
 ```bash
 brew tap akasecurity/tap
 brew install akasecurity/tap/aka-claude-tools
-brew install akasecurity/tap/flightcrew
+brew install akasecurity/tap/preflight
 ```
 
 ## Formulae
@@ -13,7 +13,7 @@ brew install akasecurity/tap/flightcrew
 - **[aka-claude-tools](https://github.com/akasecurity/claude-tools)** — the security defaults Claude
   Code doesn't ship with: clean context, locked-down credentials, guarded egress, on an isolated
   profile. Needs `jq` + `bun`.
-- **[flightcrew](https://github.com/akasecurity/flightcrew-skills)** — an independent multi-model
+- **[preflight](https://github.com/akasecurity/preflight-skills)** — an independent multi-model
   review crew for coding agents: two blind cross-family reads plus an independent judge. Report-only.
   Needs `node`.
 
