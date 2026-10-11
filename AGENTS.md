@@ -34,9 +34,12 @@ Every formula except `aka` installs from the project's **tagged source tarball**
 ## `Formula/aka.rb` is generated
 
 Every `bin-v*` release of `akasecurity/ai-tc` renders this file from that release's own
-`SHA256SUMS` and commits it here as `aka <version>`, through the contents API with a token scoped to
-this repository alone (the `HOMEBREW_TAP_TOKEN` secret on `akasecurity/ai-tc`). It installs the
-release's prebuilt archive rather than a source tarball: the archive goes into `libexec` whole,
+`SHA256SUMS` and commits it here as `aka <version>`, through the contents API. The commit is made by
+a GitHub App rather than a person: each run mints a one-hour token from the app's private key,
+scoped to this repository and to `contents: write`. The app is installed on this repository and on
+`akasecurity/scoop-bucket` only, and its configuration — the `AKA_RELEASE_APP_CLIENT_ID` variable
+and the `AKA_RELEASE_APP_PRIVATE_KEY` secret — lives on `akasecurity/ai-tc`, not here. It installs
+the release's prebuilt archive rather than a source tarball: the archive goes into `libexec` whole,
 because the binary finds its sidecar files beside its own real path, and `bin/aka` links to it.
 
 - **Change it upstream.** The renderer is `renderFormula` in `tools/package-manifests/src/lib.ts`
@@ -47,8 +50,9 @@ because the binary finds its sidecar files beside its own real path, and `bin/ak
   that version, and it never replaces a newer version with an older one.
 - **A bad formula that already landed:** revert its commit here so installs work now, then fix the
   renderer before the next release writes it again.
-- **Token problems** (missing, expired, scoped to the wrong repository): `CONTRIBUTING.md` in
-  `akasecurity/ai-tc`, section "Homebrew, Scoop and the one-click links".
+- **App problems** (not configured, not installed on this repository, key revoked, permission
+  missing): `CONTRIBUTING.md` in `akasecurity/ai-tc`, section "Homebrew, Scoop and the one-click
+  links".
 - **Verify by installing from the tap**, on Apple-silicon macOS and on Linux:
   `brew install akasecurity/tap/aka`, then `brew test aka`. Run it for the first formula that
   lands and after any renderer change. Intel macOS is refused by design (there is no darwin-x64
