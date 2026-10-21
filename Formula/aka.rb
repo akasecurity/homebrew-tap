@@ -1,7 +1,7 @@
 class Aka < Formula
   desc "Local-first security control plane for AI coding agents"
   homepage "https://github.com/akasecurity/ai-tc"
-  version "0.9.19"
+  version "0.9.20"
   license "Apache-2.0"
 
   livecheck do
@@ -12,19 +12,19 @@ class Aka < Formula
 
   on_macos do
     depends_on arch: :arm64
-    url "https://github.com/akasecurity/ai-tc/releases/download/bin-v0.9.19/aka-0.9.19-darwin-arm64.tar.gz"
-    sha256 "c34acfe66de7096633a88f1f7b717f876b1291af75ff4afe01f8096c302b57c1"
+    url "https://github.com/akasecurity/ai-tc/releases/download/bin-v0.9.20/aka-0.9.20-darwin-arm64.tar.gz"
+    sha256 "55e7965b62fccc977257cb5c99a4b69ef98264e4689c71a9a40a290eb7e83a9b"
   end
 
   on_linux do
     on_arm do
       depends_on arch: :arm64
-      url "https://github.com/akasecurity/ai-tc/releases/download/bin-v0.9.19/aka-0.9.19-linux-arm64.tar.gz"
-      sha256 "71314136d3a5d0de4be469ca6668c956d650490fc04d777310a2b7248e5d570e"
+      url "https://github.com/akasecurity/ai-tc/releases/download/bin-v0.9.20/aka-0.9.20-linux-arm64.tar.gz"
+      sha256 "70cc79c38459eb69706d74285e745493a2c9e9b788201264fc0e82f7582fed26"
     end
     on_intel do
-      url "https://github.com/akasecurity/ai-tc/releases/download/bin-v0.9.19/aka-0.9.19-linux-x64.tar.gz"
-      sha256 "860fe3d172d4886799eb649f2ceb95f6301a07cca1509d4bdf89b377117c486c"
+      url "https://github.com/akasecurity/ai-tc/releases/download/bin-v0.9.20/aka-0.9.20-linux-x64.tar.gz"
+      sha256 "c3236813763fdbe49b72802af056dd027b96e0e9dbb9fb335d9b4363b705e385"
     end
   end
 
