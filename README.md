@@ -1,4 +1,7 @@
-# AKA Security Homebrew tap
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/strip-dark.svg">
+  <img src="assets/strip-light.svg" alt="homebrew-tap by AKA Security: a Homebrew tap for AKA Security tools. A short slice of road with one truck labeled brew." width="100%">
+</picture>
 
 Homebrew formulae for [AKA Security](https://akasecurity.io) tools.
 
