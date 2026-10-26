@@ -22,7 +22,7 @@ Public. Every commit is visible immediately, and a broken formula breaks install
 
 - `Formula/aka.rb` — from `akasecurity/ai-tc`. A prebuilt binary with no runtime dependency.
   **Generated** by that repository's release workflow; see "`Formula/aka.rb` is generated" below.
-- `Formula/aka-claude-tools.rb` — from `akasecurity/claude-tools`. Needs `jq` + `bun`.
+- `Formula/aka-claude-tools.rb` — from `akasecurity/aka-claude-tools`. Needs `jq` + `bun`.
 - `Formula/preflight.rb` — from `akasecurity/preflight-skills`. Needs `node`.
 
 Formula names are not always repo names, and that is deliberate: the repo is `claude-tools` while
