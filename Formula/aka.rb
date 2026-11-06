@@ -1,30 +1,30 @@
 class Aka < Formula
   desc "Local-first security control plane for AI coding agents"
   homepage "https://github.com/akasecurity/ai-tc"
-  version "0.9.21"
+  version "0.9.24"
   license "Apache-2.0"
 
   livecheck do
-    url "https://github.com/akasecurity/ai-tc/releases/download/bin-latest/VERSION"
-    regex(/^(\d+(?:\.\d+)+)$/i)
+    url "https://raw.githubusercontent.com/akasecurity/ai-tc/bin-latest/cli/package.json"
+    regex(/"version":\s*"(\d+(?:\.\d+)+)"/i)
     strategy :page_match
   end
 
   on_macos do
     depends_on arch: :arm64
-    url "https://github.com/akasecurity/ai-tc/releases/download/bin-v0.9.21/aka-0.9.21-darwin-arm64.tar.gz"
-    sha256 "b6faa6075efb238043741731543afa5544a18e54e6f63e9befc9df1af52d7231"
+    url "https://github.com/akasecurity/ai-tc/releases/download/bin-v0.9.24/aka-0.9.24-darwin-arm64.tar.gz"
+    sha256 "50aef191ed4741d1d7d40f9722c84ba24c7dacff1b7278e651a9db21bc8994d1"
   end
 
   on_linux do
     on_arm do
       depends_on arch: :arm64
-      url "https://github.com/akasecurity/ai-tc/releases/download/bin-v0.9.21/aka-0.9.21-linux-arm64.tar.gz"
-      sha256 "7e05f62ed355f85ad7f2c3e8c371dfdce068c5f725cc3baa07ee5ce747dc7a1a"
+      url "https://github.com/akasecurity/ai-tc/releases/download/bin-v0.9.24/aka-0.9.24-linux-arm64.tar.gz"
+      sha256 "5db1c437547c1582e7412ef431e2b9a628828e7f2e4bd9e389b8bf969cd20ab3"
     end
     on_intel do
-      url "https://github.com/akasecurity/ai-tc/releases/download/bin-v0.9.21/aka-0.9.21-linux-x64.tar.gz"
-      sha256 "b1f590d3a1dc4b9ca12cc86d0694efaa2bfab895a21f7c1c5092a8518c001f2b"
+      url "https://github.com/akasecurity/ai-tc/releases/download/bin-v0.9.24/aka-0.9.24-linux-x64.tar.gz"
+      sha256 "c5dfc35c12857b6ba327ed7244a2a907d01563bed15b5c0bbcdb032b48645c58"
     end
   end
 
